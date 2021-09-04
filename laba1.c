@@ -48,6 +48,7 @@ int main(){
                         mas[j] = mas[j + 1];
                     }
                     n --;
+                    max_border --;
                 }    
                 else{
                     i ++;
