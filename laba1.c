@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 int main(){
+    system("chcp 65001");
     float mas[100000];
     int n, i, j,  flag, first_min_index, last_positive_index, min_border, max_border, last_negative_index;
     float first_min, a, x, h, average = 0;
@@ -20,7 +21,7 @@ int main(){
         }
     }
     if (flag != 1){
-        printf("Нет положительного элемента");
+        printf("Нет положительного элемента\n");
     }
     else{
         first_min = 99999999;
@@ -31,7 +32,7 @@ int main(){
             }
         }
         if (abs(last_positive_index - first_min_index) < 2){
-            printf("Элементы расположены рядом или совпадают");
+            printf("Элементы расположены рядом или совпадают\n");
         }
         else{
             printf("R = {");
@@ -76,8 +77,8 @@ int main(){
     else{
         first_min = 999999; 
         for (i = 1; i <=n; i++){
-            if (first_min > abs(mas[i])){
-                first_min = abs(mas[i]);
+            if (first_min > fabsf(mas[i])){
+                first_min = fabsf(mas[i]);
                 first_min_index = i;
             }
         }
