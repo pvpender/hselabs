@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<math.h>
+#define lmax 99999
 int main(){
     system("chcp 65001");
     float mas[100000];
@@ -7,8 +8,15 @@ int main(){
     float first_min, a, x, h, average = 0;
     printf("Лабароторная работа №1\n");
     printf("Задание 1\n");
-    printf("Введите длинну массива\n");
-    scanf("%d", &n);
+    flag = 0;
+    while (flag != 1){
+        printf("Введите длинну массива от 1 до %d\n", lmax);
+        scanf("%d", &n);
+        if ((n < 100000) && (n >= 1)){
+            flag = 1;
+        }
+    }
+
     printf("Введите a x h через пробел в одну строку\n");
     scanf("%f %f %f", &a, &x, &h);
     for (i=1; i <= n; i++){
