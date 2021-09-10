@@ -5,6 +5,7 @@ int main(){
     float mas[100000];
     int n, i, j,  flag, first_min_index, last_positive_index, min_border, max_border, last_negative_index;
     float first_min, a, x, h, average = 0;
+    printf("Задание 1\n");
     printf("Введите длинну массива\n");
     scanf("%d", &n);
     printf("Введите a x h через пробел в одну строку\n");
