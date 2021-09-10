@@ -13,6 +13,11 @@ int main(){
     for (i=1; i <= n; i++){
         mas[i] = 6 * cos((a * x + i * h));
     }
+    printf("R = {");
+    for(i = 1; i <= n; i++){
+        printf("%f ; ", mas[i]);
+    }
+    printf("} \n");
     printf("Задание 2 \n");
     for (i = 1; i <= n; i++){
         if (mas[i] > 0){
@@ -35,11 +40,7 @@ int main(){
             printf("Элементы расположены рядом или совпадают\n");
         }
         else{
-            printf("R = {");
-            for(i = 1; i <= n; i++){
-                printf("%f ; ", mas[i]);
-            }
-            printf("} \n");
+
             min_border = (first_min_index < last_positive_index) ? first_min_index:last_positive_index;
             max_border = (first_min_index < last_positive_index) ? last_positive_index:first_min_index;
             i = min_border + 1;
