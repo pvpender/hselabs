@@ -13,11 +13,10 @@ int main(){
         mas[i] = 6 * cos((a * x + i * h));
     }
     printf("Задание 2 \n");
-    for (i = n; i >= 1; i--){
+    for (i = 1; i <= n; i++){
         if (mas[i] > 0){
             last_positive_index = i;
             flag = 1;
-            break;
         }
     }
     if (flag != 1){
@@ -64,11 +63,10 @@ int main(){
     }
     printf("Задание 3 \n");
     flag = 0;
-    for(i = n; i >= 1; i --){
+    for(i = 1; i <= n; i ++){
         if (mas[i] < 0){
             last_negative_index = i;
             flag = 1;
-            break;
         }
     }
     if (flag != 1){
