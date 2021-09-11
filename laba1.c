@@ -10,13 +10,12 @@ int main(){
     printf("Задание 1\n");
     flag = 0;
     while (flag != 1){
-        printf("Введите длинну массива от 1 до %d\n", lmax);
+        printf("Введите длину массива от 1 до %d\n", lmax);
         scanf("%d", &n);
         if ((n < 100000) && (n >= 1)){
             flag = 1;
         }
     }
-
     printf("Введите a x h через пробел в одну строку\n");
     scanf("%f %f %f", &a, &x, &h);
     for (i=1; i <= n; i++){
