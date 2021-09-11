@@ -38,7 +38,7 @@ int main(){
         printf("Нет положительного элемента\n");
     }
     else{
-        first_min = 99999999;
+        first_min = 2147483647;
         for (i=1; i<=n; i++){
             if (mas[i] < first_min){
                 first_min = mas[i];
@@ -84,7 +84,7 @@ int main(){
         printf("Нет отрицательного числа, невозможно посчитать среднее");
     }
     else{
-        first_min = 999999; 
+        first_min = 2147483647;
         for (i = 1; i <=n; i++){
             if (first_min > fabsf(mas[i])){
                 first_min = fabsf(mas[i]);
