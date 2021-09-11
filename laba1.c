@@ -12,7 +12,7 @@ int main(){
     while (flag != 1){
         printf("Введите длину массива от 1 до %d\n", lmax);
         scanf("%d", &n);
-        if ((n < 100000) && (n >= 1)){
+        if ((n < lmax + 1) && (n >= 1)){
             flag = 1;
         }
     }
