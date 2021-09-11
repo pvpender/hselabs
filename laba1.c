@@ -27,6 +27,7 @@ int main(){
     }
     printf("} \n");
     printf("Задание 2 \n");
+    flag = 0;
     for (i = 1; i <= n; i++){
         if (mas[i] > 0){
             last_positive_index = i;
