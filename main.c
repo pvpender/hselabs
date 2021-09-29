@@ -2,23 +2,27 @@
 
 int main() {
     system("chcp 65001");
-    int n, m, flag, i, j, z, all_numbers_z, number_z;
+    int n, m, flag, i, j, z, all_numbers_z, number_z, k;
+    printf("Лабоарторная работа №2\n");
     printf("Задание 1\n");
-    printf("Введите n и m \n");
-    scanf("%d %d", &n, &m);
-    while (!((n > 0) && (n < 200) && (m > 0) && (m < 200))){
+    do{
         printf("Введите n и m \n");
-        scanf("%d %d", &n, &m);
-    }
+        k = scanf("%d %d", &n, &m);
+        while(getchar()!='\n');
+    }while (!((n > 0) && (n < 200) && (m > 0) && (m < 200)) || (k!=2));
     printf("Вводите массив построчно\n");
     int mas[n+1][m];
     for(j=0;j<m;j++){
         mas[n][j] = 0;
     }
     for(i = 0; i < n; i++){
-        for(int j = 0; j < m; j++){
-            scanf("%d", &mas[i][j]);
-        }
+        do {
+            k = 0;
+            for (int j = 0; j < m; j++) {
+                k += scanf("%d", &mas[i][j]);
+            }
+            while(getchar()!='\n');
+        } while (k != m);
     }
     printf("\n");
     printf("Введённый массив:\n");
@@ -38,7 +42,7 @@ int main() {
         if (flag == 0){
             for (j = 0; j < m; j ++){
                 for (int c = i; c < n; c++){
-                    mas[i][j] = mas[i+1][j];
+                    mas[c][j] = mas[c+1][j];
                 }
             }
             n -= 1;
@@ -55,16 +59,28 @@ int main() {
         }
         printf("\n");
     }
-    printf("Задание 2\n");
-    printf("Введите длинну массива\n");
-    scanf("%d", &n);
-    printf("Введите массив\n");
+    printf("\nЗадание 2\n");
+
+    do{
+        printf("Введите длинну массива\n");
+        k = scanf("%d", &n);
+        while(getchar()!='\n');
+    } while (k != 1);
+
     int massive[n];
-    for(i = 0; i < n; i++){
-        scanf("%d", &massive[i]);
-    }
-    printf("Введите Z\n");
-    scanf("%d", &z);
+    do {
+        printf("Введите массив\n");
+        k = 0;
+        for(i = 0; i < n; i++){
+            k += scanf("%d", &massive[i]);
+        }
+        while(getchar()!='\n');
+    } while (k != n);
+    do {
+        printf("Введите Z\n");
+        k = scanf("%d", &z);
+        while(getchar()!='\n');
+    } while ((k != 1) && (z < 10) && (z > -1));
     int new_mas[10000];
     int numbers = 0;
     all_numbers_z = 0;
